@@ -53,7 +53,7 @@ def load_video_2(folder_address, aweme_id, cc_size=224, rs_size=256):
     img_list = [] # ['12345678_0.jpg', '23456789_1.jpg']
     all_file = os.listdir(folder_address)
     for single_file in all_file:
-        if str(aweme_id) in single_file:
+        if str(aweme_id) in single_file and '.jpg' in single_file:
             img_list.append(single_file)
     frames = []
     for img in img_list:
